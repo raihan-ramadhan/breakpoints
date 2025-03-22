@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+    <!-- Apple Touch Icon (iOS) -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Android Chrome Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Breakpoints - Responsive Web Preview</title>
+    <meta
+      name="description"
+      content="Test your website across different resolutions, from mobile to 4K TVs."
+    />
+    <meta
+      name="keywords"
+      content="responsive design, breakpoints tester, web development, PWA"
+    />
+    <meta name="author" content="Raihan Ramadhan" />
+
+    <!-- Open Graph (For Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Breakpoints - Responsive Web Preview" />
+    <meta
+      property="og:description"
+      content="Test your website across different resolutions, from mobile to 4K TVs."
+    />
+    <meta property="og:image" content="/android-chrome-512x512.png" />
+    <meta property="og:url" content="https://raihan-ramadhan.vercel.app/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card (For Twitter Sharing) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Breakpoints - Responsive Web Preview" />
+    <meta
+      name="twitter:description"
+      content="Test your website across different resolutions, from mobile to 4K TVs."
+    />
+    <meta name="twitter:image" content="/android-chrome-512x512.png" />
+
+    <!-- PWA Meta Tags -->
+    <!-- <meta name="theme-color" content="#ffffff" /> -->
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+
+    <script>
+      (function () {
+        const storageKey = "vite-ui-theme";
+        const storedTheme = localStorage.getItem(storageKey);
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = storedTheme || (systemPrefersDark ? "dark" : "light");
+
+        if (theme === "dark") {
+          document.documentElement.style.backgroundColor = "#1c1c1c"; // make sure the value is the same with --background on index.css in .dark {}
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

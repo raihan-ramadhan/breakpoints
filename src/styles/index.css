@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@import "./variables.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* FOR SELECTION */
+@layer base {
+  @layer base {
+    html,
+    body {
+      color: currentColor;
+    }
+
+    ::selection {
+      background-color: var(--primary); /* Uses your primary color */
+      color: var(--primary-foreground); /* Ensures contrast */
+    }
+  }
+}
+
+/* FOR SCROLL BAR STYLE */
+@layer base {
+  * {
+    scrollbar-width: thin; /* Firefox */
+  }
+  ::-webkit-scrollbar {
+    width: 6px; /* Chrome, Safari, Edge */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); /* Dark thumb for light mode */
+    border-radius: 4px;
+  }
+  html.dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2); /* Light thumb for dark mode */
+  }
+  /* Firefox */
+  html {
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+  /* Firefox */
+  html.dark {
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  }
+}
