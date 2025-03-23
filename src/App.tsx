@@ -49,6 +49,7 @@ function App() {
           error instanceof Error ? error.message : "Something went wrong";
         console.error(errorMsg);
         setError(errorMsg);
+        setSubmittedUrl("");
       }
     });
   };
