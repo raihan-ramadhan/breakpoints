@@ -23,8 +23,7 @@ This project is a developer tool that allows users to preview how their live web
 ## Screenshots / Demo
 
 Live Demo: [Demo Link](https://breakpoints-one.vercel.app/)
-
-![Screenshot]\([https://github.com/raihan-ramadhan/breakpoints/blob/main/public/screenshot.png](https://github.com/raihan-ramadhan/breakpoints/blob/main/public/screenshot.png))
+![Screenshot](https://github.com/raihan-ramadhan/breakpoints/blob/main/public/screenshot.png)
 
 ## Technologies Used
 
