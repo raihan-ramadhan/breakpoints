@@ -1,54 +1,82 @@
-# React + TypeScript + Vite
+# Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is a developer tool that allows users to preview how their live websites render across various screen sizes, including desktops, tablets, televisions, and mobile phones. It helps developers ensure their websites are fully responsive and provide an optimal user experience across different devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Multi-screen breakpoint support** – Test website responsiveness across various screen sizes.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Zoom in/out functionality** – Adjust the view for better inspection of design elements.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Customizable screen setup** – Add or remove screens to testing.
+
+- **Orientation toggle** – Switch between landscape and portrait mode instantly.
+
+- **Dark mode support** – Automatically adapts to system preferences for a comfortable viewing experience.
+
+- **Fully responsive interface** – Ensures smooth usability and adaptability.
+
+- **Minimal and intuitive UI** – Designed for ease of use without unnecessary clutter.
+
+## Screenshots / Demo
+
+Live Demo: [Demo Link](https://breakpoints-one.vercel.app/)
+
+![Screenshot](https://github.com/raihan-ramadhan/breakpoints/blob/main/public/screenshot.png)
+
+## Technologies Used
+
+- **Vite** – Fast build tool for modern web projects.
+
+- **React** – JavaScript library for building user interfaces.
+
+- **ShadCN** – UI component library based on Radix UI.
+
+- **TailwindCSS v4** – Utility-first CSS framework for styling.
+
+- **React Zoom Pan Pinch** – Library for zooming, panning, and pinching interactions.
+
+- **Vercel** – Hosting and deployment platform.
+
+## Future Improvements
+
+- **Canvas mode for website previews** – Allow resizing, grabbing, and zooming within a flexible canvas, similar to Figma or Adobe Illustrator.
+
+- **More customization options for breakpoints**
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/raihan-ramadhan/breakpoints.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd breakpoints
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+## Usage
+
+Run the project with:
+
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contributing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+If you want to contribute, please fork the repository and make a pull request.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+- **Raihan Ramadhan** – [GitHub](https://github.com/raihan-ramadhan)
