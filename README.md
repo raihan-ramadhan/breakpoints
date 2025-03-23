@@ -1,4 +1,4 @@
-# Project Name
+# Breakpoints
 
 ## Description
 
@@ -24,7 +24,7 @@ This project is a developer tool that allows users to preview how their live web
 
 Live Demo: [Demo Link](https://breakpoints-one.vercel.app/)
 
-![Screenshot](https://github.com/raihan-ramadhan/breakpoints/blob/main/public/screenshot.png)
+![Screenshot]\([https://github.com/raihan-ramadhan/breakpoints/blob/main/public/screenshot.png](https://github.com/raihan-ramadhan/breakpoints/blob/main/public/screenshot.png))
 
 ## Technologies Used
 
@@ -62,6 +62,41 @@ Live Demo: [Demo Link](https://breakpoints-one.vercel.app/)
    ```
 
 ## Usage
+
+⚠ **Notice:** The target preview website must allow CORS (Cross-Origin Resource Sharing). If your website uses Next.js and cannot be previewed, you may need to adjust your CORS settings.
+
+For Next.js, add the following to your `next.config.js`:
+
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*", // ✅ Allow all origins
+          },
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET, OPTIONS",
+          },
+          {
+            key: "Access-Control-Allow-Headers",
+            value: "Content-Type",
+          },
+        ],
+      },
+    ];
+  },
+};
+
+module.exports = nextConfig;
+```
+
+⚠ **Important:** Don't forget to remove this CORS configuration before deploying to production to avoid security risks.
 
 Run the project with:
 
